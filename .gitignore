@@ -1,0 +1,45 @@
+# ignore everything in the root except the "wp-content" directory.
+!wp-content/
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+!wp-content/uploads/
+# ignore these plugins
+wp-content/plugins/*
+!wp-content/plugins/Manually-set-subtitles/
+!wp-content/plugins/pirate-search/
+!wp-content/plugins/scraper/
+# ignore specific themes
+wp-content/themes/*
+!wp-content/themes/Loostrive/
+wp-content/themes/Loostrive/cache/
+wp-content/themes/Loostrive/autopost/*.txt
+wp-content/themes/Loostrive/autopost/*.html
+wp-content/themes/Loostrive/autopost/*.json
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+Thumbs.db
+
+# 宝塔
+.user.ini
+404.html
+
+# 自定义
+.idea/
+.project
+wp-admin/
+wp-includes/
+/*.php
+/*.txt
+/readme.html
+!/ReplacementLink.php
+

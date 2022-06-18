@@ -1,0 +1,15 @@
+location / {
+	try_files $uri $uri/ /index.php?$args;
+}
+
+rewrite /wp-admin$ $scheme://$host$uri/ permanent;
+
+
+rewrite "^/timthumb/(.*?)/(.*)$" /wp-content/themes/Loostrive/timthumb.php?src=https://$1.doubanio.com/$2&w=0&h=1&zc=1 break;
+rewrite "^/timthumb/(.*)$" /wp-content/themes/Loostrive/timthumb.php?src=https://$1&w=0&h=1&zc=1 break;
+
+rewrite "^/timthumb_(\d+)/(.*?)/(.*)$" /wp-content/themes/Loostrive/timthumb.php?src=https://$2.doubanio.com/$3&w=$1&zc=1 break;
+rewrite "^/timthumb_(\d+)/(.*)$" /wp-content/themes/Loostrive/timthumb.php?src=https://$2&w=$1&zc=1 break;
+
+rewrite "^/timthumb_(\d+)_(\d+)/(.*?)/(.*)$" /wp-content/themes/Loostrive/timthumb.php?src=https://$3.doubanio.com/$4&h=$2&w=$1&zc=1 break;
+rewrite "^/timthumb_(\d+)_(\d+)/(.*)$" /wp-content/themes/Loostrive/timthumb.php?src=https://$3&h=$2&w=$1&zc=1 break;
