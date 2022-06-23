@@ -1,3 +1,8 @@
+if ($host !~* "^mv918.com$"){
+    rewrite ^/(.*) http://mv918.com/$1 permanent;
+}
+
+
 location / {
 	try_files $uri $uri/ /index.php?$args;
 }
