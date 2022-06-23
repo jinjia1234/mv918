@@ -39,7 +39,7 @@ $(document).ready(function () {
                 'postid': $('#main a').attr('id'),
                 'title': title,
             },
-            timeout: 5000, //设置超时的时间6s
+            timeout: 8000, //设置超时的时间6s
             success: function (result) {
                 if (result.state == 1) {
                     // msg = result.password != undefined ? ' (解压密码:' + result.password + ')' : '';
