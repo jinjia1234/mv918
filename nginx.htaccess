@@ -1,7 +1,16 @@
+set $location 1;
 if ($host !~* "^mv918.com$"){
+    set $location 0;
+}
+if ($host !~* "^www.mv918.com$"){
+    set $location 0;
+}
+if ($host !~* "^movie.mv918.com$"){
+    set $location 0;
+}
+if($location = 1){
     rewrite ^/(.*) http://mv918.com/$1 permanent;
 }
-
 
 location / {
 	try_files $uri $uri/ /index.php?$args;
