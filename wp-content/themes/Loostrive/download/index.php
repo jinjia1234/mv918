@@ -84,7 +84,7 @@ if ((int)$id > 0 && !empty($title)) {
         </div>
 
         <script src="<?php echo bloginfo('stylesheet_directory'); ?>/js/jquery.min.js"></script>
-        <script src="<?php echo bloginfo('stylesheet_directory'); ?>/download/download_bak.js?v=1"></script>
+        <script src="<?php echo bloginfo('stylesheet_directory'); ?>/download/download_bak.js?v=2"></script>
         <script>
             var _hmt = _hmt || [];
             (function () {
