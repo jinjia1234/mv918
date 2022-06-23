@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Pirate Search
- * Plugin URI: http://tt3p.com
+ * Plugin URI: http://gamecf.cn
  * Description: 搜索海盗湾
  * Version: 1.0.0
  * Author: QQ1716001590
