@@ -20,7 +20,7 @@ if ((int)$id > 0 && !empty($title)) {
             $id = $value1->postid;
             $data_movie_a = json_decode($value1->a);
             foreach ($data_movie_a as $key2 => $value2) {
-                if (strtolower($value2->title) == strtolower($title)) {
+                if (trim(strtolower($value2->title)) == trim(strtolower($title))) {
                     $title = $value2->title;
                     if (!empty($value2->download)) {
                         $magnet = scraper::magnet($value2->download);
