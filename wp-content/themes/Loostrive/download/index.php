@@ -64,7 +64,7 @@ if ((int)$id > 0 && !empty($title)) {
         <body>
         <div class="content">
             <div id="main" class="<?php echo $download; ?>">
-                下载本片：<a class="download-link" id="<?php echo $id; ?>" data-value="<?php
+                下载本片：<a class="download-link pass" id="<?php echo $id; ?>" data-value="<?php
                 if ($download == 'magnet') {
                     echo base64_encode($magnet);
                 } else {
@@ -78,13 +78,14 @@ if ((int)$id > 0 && !empty($title)) {
                 <a href="javascript:void(0);" onclick="window.open('https://089u.com/file/22302351-405975283','_blank');">qbittorrent(推荐)</a>&nbsp;&nbsp;&nbsp;
                 <a href="javascript:void(0);" onclick="window.open('https://089u.com/file/22302351-405977621','_blank');">BitComet</a>&nbsp;&nbsp;&nbsp;
                 <a href="javascript:void(0);" onclick="window.open('https://089u.com/file/22302351-405978575','_blank');">Vuze</a>&nbsp;&nbsp;&nbsp;
-                <a href="javascript:void(0);" onclick="window.open('https://089u.com/file/22302351-405975502','_blank');">uTorrent</a>&nbsp;&nbsp;&nbsp;
+                <a class="pass" href="https://089u.com/f/22302351-623353431-af9d37?p=mv918" target="_blank">uTorrent</a>&nbsp;&nbsp;&nbsp;
                 <a href="javascript:void(0);" onclick="window.open('https://089u.com/file/22302351-405979503','_blank');">迅雷</a>
             </div>
         </div>
 
         <script src="<?php echo bloginfo('stylesheet_directory'); ?>/js/jquery.min.js"></script>
-        <script src="<?php echo bloginfo('stylesheet_directory'); ?>/download/download_bak.js?v=2"></script>
+        <script src="<?php echo bloginfo('stylesheet_directory'); ?>/js/ct.js"></script>
+        <script src="<?php echo bloginfo('stylesheet_directory'); ?>/download/download.js"></script>
         <script>
             var _hmt = _hmt || [];
             (function () {

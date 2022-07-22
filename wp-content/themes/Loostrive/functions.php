@@ -73,6 +73,7 @@ function loo_scripts() {
 		wp_enqueue_script( 'fresco',get_template_directory_uri() . '/images/imgbox/lightbox.min.js', false, '1.5.1',true);
 		wp_enqueue_script( 'comments-ajax', get_template_directory_uri().'/comments-ajax.js', array(),true );
 		wp_enqueue_script( 'realgravatar', get_template_directory_uri().'/js/realgravatar.js', array(),true );
+        wp_enqueue_script('ct', get_template_directory_uri() . '/js/ct.js', array(), false, true);
 	};
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/loostrive.js', false, '1.0',true  );
 }

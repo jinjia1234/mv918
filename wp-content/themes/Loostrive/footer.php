@@ -84,37 +84,14 @@ if(is_single()){
                     response.forEach((item, index) => {
                         if (h2_html.indexOf(item.title) != -1) {
                             if(item.share_file_key) {
-                                $(this).html(h2_html + " &nbsp; <a class='down_link' href='https://089u.com/f/22302351-" + item.share_file_id + (item.share_file_key ? '-' + item.share_file_key : '') + "?p=mv918' target='_blank'>下载字幕(密码:mv918)</a>");
+                                $(this).html(h2_html + " &nbsp; <a class='pass' href='https://089u.com/f/22302351-" + item.share_file_id + (item.share_file_key ? '-' + item.share_file_key : '') + "?p=mv918' target='_blank'>下载字幕(密码:mv918)</a>");
                             }else{
-                                $(this).html(h2_html + " &nbsp; <a class='down_link' href='https://089u.com/file/22302351-" + item.share_file_id + "' target='_blank'>下载字幕</a>");
+                                $(this).html(h2_html + " &nbsp; <a class='pass' href='https://089u.com/file/22302351-" + item.share_file_id + "' target='_blank'>下载字幕</a>");
                             }
                             return ;
                         }
                     });
                 });
-            });
-            $(document).on('click','.down_link',function () {
-                var that = $(this);
-                var password = $(this).data('password');
-                if (!password) {
-                    var url = $(this).attr('href');
-                    var ids = url.split('/').pop().split('-');
-                    if(ids.length == 3){
-                        $.ajax({
-                            type: 'GET',
-                            url: "https://webapi.ctfile.com/passcode.php?file_id=" + ids[1] + "&folder_id=0&userid=" + ids[0] + "&passcode=mv918&r=" + Math.random(),
-                            xhrFields: {
-                                withCredentials: true
-                            },
-                            crossDomain: true,
-                            dataType: 'json',
-                            success: function (data) {
-                                that.attr('data-password', 'mv918');
-                                console.log(data);
-                            }
-                        });
-                    }
-                }
             });
         });
     </script>

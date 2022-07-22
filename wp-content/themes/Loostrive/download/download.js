@@ -92,26 +92,4 @@ $(document).ready(function () {
     }
 
     torrent();
-
-    $(document).on('click', '.download-link', function () {
-        var password = $(this).data('password');
-        if (!password) {
-            var url = $(this).attr('href');
-            var ids = url.split('/').pop().split('-');
-            $.ajax({
-                type: 'GET',
-                url: "https://webapi.ctfile.com/passcode.php?file_id=" + ids[1] + "&folder_id=0&userid=" + ids[0] + "&passcode=mv918&r=" + Math.random(),
-                xhrFields: {
-                    withCredentials: true
-                },
-                crossDomain: true,
-                dataType: 'json',
-                success: function (data) {
-                    $(this).attr('data-password', 'mv918');
-                    console.log(data);
-                }
-            });
-        }
-
-    });
 });
