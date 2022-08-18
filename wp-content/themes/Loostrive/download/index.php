@@ -77,8 +77,8 @@ if ((int)$id > 0 && !empty($title)) {
                 如果无法下载，请点击此处，获得下载工具<br><br>
                 <a href="javascript:void(0);" onclick="window.open('https://089u.com/file/22302351-405975283','_blank');">qbittorrent(推荐)</a>&nbsp;&nbsp;&nbsp;
                 <a href="javascript:void(0);" onclick="window.open('https://089u.com/file/22302351-405977621','_blank');">BitComet</a>&nbsp;&nbsp;&nbsp;
-                <a class="pass" href="http://down.mv918.com/f/22302351-623433279-40107a?p=mv918" target="_blank">Vuze</a>&nbsp;&nbsp;&nbsp;
-                <a class="pass" href="http://down.mv918.com/f/22302351-623353431-af9d37?p=mv918" target="_blank">uTorrent</a>&nbsp;&nbsp;&nbsp;
+                <a class="pass" href="//<?php echo $_SERVER['HTTP_HOST']; ?>/f/22302351-623433279-40107a?p=mv918" target="_blank">Vuze</a>&nbsp;&nbsp;&nbsp;
+                <a class="pass" href="//<?php echo $_SERVER['HTTP_HOST']; ?>/f/22302351-623353431-af9d37?p=mv918" target="_blank">uTorrent</a>&nbsp;&nbsp;&nbsp;
                 <a href="javascript:void(0);" onclick="window.open('https://089u.com/file/22302351-405979503','_blank');">迅雷</a>
             </div>
         </div>
