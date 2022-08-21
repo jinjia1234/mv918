@@ -1,15 +1,15 @@
 set $host_301 1;
 if ($host ~* "^mv918.com$"){
-    set $host_301 0;
+#   set $host_301 0;
 }
 if ($host ~* "^www.mv918.com$"){
     set $host_301 0;
 }
 if ($host ~* "^movie.mv918.com$"){
-    set $host_301 0;
+#   set $host_301 0;
 }
 if ($host_301 = 1){
-    rewrite ^/(.*) http://mv918.com/$1 permanent;
+    rewrite ^/(.*) http://www.mv918.com/$1 permanent;
 }
 
 location / {

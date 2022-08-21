@@ -6,11 +6,10 @@
   </div>
   <?php } else {} ?>
   <?php if (get_option('strive_flinks') == 'Display') { ?>
-  <?php wp_reset_query(); if ( is_home() ) { ?> 
+  <?php wp_reset_query(); ?>
   <div class="footnav container">
     <?php if(function_exists('wp_nav_menu')) {wp_nav_menu(array('theme_location'=>'friendlink','menu_id'=>'friendlink','container'=>'ul'));}?>
   </div>
-  <?php } ?>
   <?php } else {} ?>
   <div class="copyright">
   <p> Copyright <?php echo comicpress_copyright();?> <a href="<?php bloginfo('url');?>/"><strong>
