@@ -20,15 +20,20 @@ if ( is_single()){
         $description  = strip_tags(trim($post->post_excerpt));
     } else {
    		$description = strip_tags(trim(wp_trim_words($post->post_content, 130,"") ));
-  	} 
-    $keywords = "";     
+  	}
+    $auto_movie = $wpdb->get_row(" select * from {$wpdb->prefix}auto_movie where postid='{$post->ID}'; ");
+    $alt_title = '';
+    if ($auto_movie && $b = json_decode($auto_movie->b, true)) {
+        $alt_title = trim(explode('/', $b['alt_title'] ?? '')[0]);
+        if (!$alt_title) $alt_title = $b['title'] ?? '';
+    }
+    $keywords = $alt_title ? "{$alt_title}迅雷下载,{$alt_title}种子下载,{$alt_title}高清下载" : '';
     $tags = wp_get_post_tags($post->ID);
     foreach ($tags as $tag ) {
         $keywords = $keywords . $tag->name . ",";
     }
 }
 ?>
-<?php echo "\n"; ?>
 <?php if ( is_single()) { ?>
 <meta name="description" content="<?php echo trim($description); ?>" />
 <meta name="keywords" content="<?php echo rtrim($keywords,','); ?>" />
@@ -49,7 +54,6 @@ if ( is_single()){
 	$description = trim( str_replace( array( "\r\n", "\r", "\n", "　", " "), " ", str_replace( "\"", "'", strip_tags( $text ) ) ) );
 	if ( !( $description ) ) $description = $blog_name . "-" . trim( wp_title('', false) );
 	?>
-	
 <meta name="description" content="<?php echo mb_substr( $description, 0, 130, 'utf-8' ); ?>" />
 <meta name="keywords" content="<?php echo trim( wp_title('', false) );; ?>" />
 <?php } ?>
