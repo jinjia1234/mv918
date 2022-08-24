@@ -223,6 +223,7 @@ remove_action( 'wp_head',   'wlwmanifest_link' );
 remove_action( 'wp_head',   'index_rel_link' );
 remove_action( 'wp_head',   'start_post_rel_link', 10, 0 );
 remove_action( 'wp_head',   'wp_generator' );
+add_filter('wpseo_next_rel_link', '__return_false');      // 关闭预加载下一页
 //后台仪表盘订阅洛米（不需要可删除）
 function dashboard_custom_feed_output() {
      echo '<div class="rss-widget">';
