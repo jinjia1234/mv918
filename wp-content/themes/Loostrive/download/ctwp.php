@@ -68,7 +68,7 @@ class ctwp {
     public function get_file_share_link() {
         $file_info = self::get_local_file_info();
         // var_dump(http_build_query($file_info));
-        $result = self::curl('http://mv918.com/down/default/', [
+        $result = self::curl('http://www.mv918.com/down/default/', [
             'body' => http_build_query($file_info),
         ]);
         // var_dump($result);
