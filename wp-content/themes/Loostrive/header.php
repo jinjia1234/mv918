@@ -3,7 +3,7 @@ if(isset($_REQUEST["api"])){get_template_part('api/index');exit;}
 if(isset($_REQUEST["auto"])){get_template_part('autopost/index');exit;}
 if(isset($_REQUEST["download"]) && ($_REQUEST["download"]=="magnet" || $_REQUEST["download"]=="suburl")){get_template_part('download/index');exit;}
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
 <meta charset="UTF-8">

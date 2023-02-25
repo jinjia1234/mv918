@@ -1,1 +1,23 @@
- 
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+
+RewriteRule ^timthumb/(.*?)/(.*)$ /wp-content/themes/Loostrive/timthumb.php?src=https://$1.doubanio.com/$2&w=0&h=1&zc=1 [QSA,L]
+RewriteRule ^timthumb/(.*)$ /wp-content/themes/Loostrive/timthumb.php?src=https://$1&w=0&h=1&zc=1 [QSA,L]
+
+RewriteRule ^timthumb_(\d+)/(.*?)/(.*)$ /wp-content/themes/Loostrive/timthumb.php?src=https://$2.doubanio.com/$3&w=$1&zc=1 [QSA,L]
+RewriteRule ^timthumb_(\d+)/(.*)$ /wp-content/themes/Loostrive/timthumb.php?src=https://$2&w=$1&zc=1 [QSA,L]
+
+RewriteRule ^timthumb_(\d+)_(\d+)/(.*?)/(.*)$ /wp-content/themes/Loostrive/timthumb.php?src=https://$3.doubanio.com/$4&h=$2&w=$1&zc=1 [QSA,L]
+RewriteRule ^timthumb_(\d+)_(\d+)/(.*)$ /wp-content/themes/Loostrive/timthumb.php?src=https://$3&h=$2&w=$1&zc=1 [QSA,L]
+
+
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+
+
+</IfModule>

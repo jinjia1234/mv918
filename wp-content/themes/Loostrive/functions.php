@@ -1,4 +1,7 @@
 <?php
+// 删除Yoast SEO生成的结构化数据：
+add_filter( 'wpseo_json_ld_output', '__return_false' );
+
 //函数开始
 include('includes/theme_options.php');//后台设置
 include('includes/breadcrumbs.php');//面包屑
