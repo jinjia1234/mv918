@@ -41,5 +41,6 @@ wp-includes/
 /*.php
 /*.txt
 /readme.html
+!/wp-config-start.php
 !/ReplacementLink.php
 
